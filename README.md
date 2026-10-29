@@ -1,23 +1,20 @@
 # gnome-external-display-brightness
 Software brightness slider for external displays on GNOME Shell using xrandr.
 
-GNOME External Display Brightness
+### GNOME External Display Brightness
 
 A GNOME Shell extension that provides a software brightness slider for an external display using xrandr.
 
-Requirements
+# Requirements
 
-• Linux with GNOME Shell.
-
-• An X11 session.
-
-• xrandr installed.
-
-• An external display recognized by xrandr.
+- Linux with GNOME Shell.
+- An X11 session.
+- xrandr installed.
+- An external display recognized by xrandr.
 
 Tested on Debian 11 Bullseye with GNOME Shell 3.38.6. Other GNOME Shell versions may require changes to the extension code or metadata.
 
-Installation
+# Installation
 
 1. Download the Extension
 
@@ -59,7 +56,6 @@ List the available display outputs:
 xrandr --query 
 
 Find the name of your connected display. Examples include VGA-1, HDMI-1, and DP-1.
-
 In extension.js, locate the DISPLAY_OUTPUT constant and set it to your actual display output name:
 
 const DISPLAY_OUTPUT = 'VGA-1'; 
@@ -81,7 +77,6 @@ Check the extension status:
 gnome-extensions info user-deb@user-deb 
 
 If the extension does not appear immediately, log out and log back in.
-
 On an X11 session, you can also try restarting GNOME Shell by pressing Alt + F2, typing r, and pressing Enter. This method is not available on Wayland sessions.
 
 5. Troubleshooting
@@ -92,25 +87,18 @@ journalctl --user -b --no-pager | grep -iE \ 'JS ERROR|TypeError|ReferenceError|
 
 Check that:
 
-• The directory is named user-deb@user-deb.
-
-• metadata.json contains the matching UUID.
-
-• The display output configured in extension.js exists in xrandr --query.
-
-• Your GNOME Shell version is compatible with the extension.
+- The directory is named user-deb@user-deb.
+- metadata.json contains the matching UUID.
+- The display output configured in extension.js exists in xrandr --query.
+- Your GNOME Shell version is compatible with the extension.
 
 Compatibility and Limitations
 
-• Tested on Debian 11 Bullseye with GNOME Shell 3.38.6.
-
-• Designed for X11 sessions; Wayland is not supported by this implementation.
-
-• Other GNOME Shell versions may require code or metadata changes.
-
-• Software brightness adjustment does not control the monitor's or television's physical backlight. It modifies the displayed image and may affect contrast or image quality.
-
-• Display support depends on the graphics driver and the functionality available through xrandr.
+- Tested on Debian 11 Bullseye with GNOME Shell 3.38.6.
+- Designed for X11 sessions; Wayland is not supported by this implementation.
+- Other GNOME Shell versions may require code or metadata changes.
+- Software brightness adjustment does not control the monitor's or television's physical backlight. It modifies the displayed image and may affect contrast or image quality.
+- Display support depends on the graphics driver and the functionality available through xrandr.
 
 Backup and Restore
 
@@ -120,7 +108,8 @@ You can back up the extension directory to a USB drive, external disk, or compre
 
 Create a compressed archive in your home directory:
 
-cd ~/.local/share/gnome-shell/extensions/ tar -czf ~/brightness-extension-backup.tar.gz user-deb@user-deb 
+cd ~/.local/share/gnome-shell/extensions/ 
+tar -czf ~/brightness-extension-backup.tar.gz user-deb@user-deb 
 
 Copy brightness-extension-backup.tar.gz to a USB drive, external disk, or another safe location.
 
@@ -130,7 +119,8 @@ After reinstalling Linux, make sure GNOME Shell is installed and compatible with
 
 Copy the backup archive into your home directory, then run:
 
-mkdir -p ~/.local/share/gnome-shell/extensions/ tar -xzf ~/brightness-extension-backup.tar.gz \ -C ~/.local/share/gnome-shell/extensions/ 
+mkdir -p ~/.local/share/gnome-shell/extensions/ 
+tar -xzf ~/brightness-extension-backup.tar.gz \ -C ~/.local/share/gnome-shell/extensions/ 
 
 3. Re-enable the Extension
 
@@ -147,9 +137,8 @@ If the extension does not start, log out and log back in, then inspect the logs 
 4. After Restoring
 
 If you install a different GNOME Shell version or change your display hardware, you may need to update metadata.json, the extension code, or DISPLAY_OUTPUT.
-
 Keep both the compressed archive and, if possible, a separate copy of the original extension directory.
 
-License
+### License
 
 See the LICENSE file for the applicable open-source license.
