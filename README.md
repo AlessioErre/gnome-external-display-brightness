@@ -143,3 +143,13 @@ Tested on Debian 11 Bullseye with GNOME Shell 3.38.6. Other GNOME Shell versions
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 Copyright (C) 2026 Alessio Erre.
+
+
+![Img-1](Img/1.png)
+![Img-2](Img/2.png)
+![Img-3](Img/3.png)
+![Img-4](Img/4.png)
+![Img-5](Img/5.png)
+![Img-6](Img/brightness.png)
+![Img-7](Img/debian-logo.png)
+![Img-8](Img/gnome.png)
