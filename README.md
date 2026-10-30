@@ -151,5 +151,11 @@ Copyright (C) 2026 Alessio Erre.
 ![Img-4](Img/4.png)
 ![Img-5](Img/5.png)
 ![Img-6](Img/brightness.png)
+
+<br>
+
 ![Img-7](Img/debian-logo.png)
+
+<br>
+
 ![Img-8](Img/gnome.png)
