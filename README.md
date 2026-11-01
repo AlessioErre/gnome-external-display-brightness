@@ -23,9 +23,9 @@ Tested on Debian 11 Bullseye with GNOME Shell 3.38.6. Other GNOME Shell versions
 
     Make sure the extension directory contains at least these files:
 
-    user-deb@user-deb/ 
-        ├── metadata.json 
-        └── extension.js 
+        user-deb@user-deb/ 
+            ├── metadata.json 
+            └── extension.js 
 
 2. Install the Extension
 
