@@ -8,8 +8,11 @@ A GNOME Shell extension that provides a software brightness slider for an extern
 # Requirements
 
 - Linux with GNOME Shell.
+
 - An X11 session.
+
 - xrandr installed.
+
 - An external display recognized by xrandr.
 
 Tested on Debian 11 Bullseye with GNOME Shell 3.38.6. Other GNOME Shell versions may require changes to the extension code or metadata.
@@ -87,16 +90,23 @@ Tested on Debian 11 Bullseye with GNOME Shell 3.38.6. Other GNOME Shell versions
     Check that:
 
       - The directory is named user-deb@user-deb.
+
       - metadata.json contains the matching UUID.
+
       - The display output configured in extension.js exists in xrandr --query.
+
       - Your GNOME Shell version is compatible with the extension.
 
     Compatibility and Limitations
 
       - Tested on Debian 11 Bullseye with GNOME Shell 3.38.6.
+
       - Designed for X11 sessions; Wayland is not supported by this implementation.
+
       - Other GNOME Shell versions may require code or metadata changes.
+
       - Software brightness adjustment does not control the monitor's or television's physical backlight. It modifies the displayed image and may affect contrast or image quality.
+
       - Display support depends on the graphics driver and the functionality available through xrandr.
 
     Backup and Restore
